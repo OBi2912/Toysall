@@ -1,0 +1,177 @@
+/* CategoryModal.css – estilos básicos para el modal de categoría */
+
+/* Contenedor interno del modal (ya está envuelto por .modal-content del Modal reutilizable) */
+.category-modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    max-width: 500px;
+    width: 100%;
+    max-height: 70vh;
+}
+
+/* Cabecera del modal */
+.category-modal-header {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: var(--spacing-sm);
+}
+
+.category-modal-header h2 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-primary);
+}
+
+/* Descripción de la categoría */
+.category-modal-description {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-top: var(--spacing-xs);
+}
+
+/* Lista de productos */
+.category-modal-products {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: var(--spacing-sm);
+}
+
+/* Mensaje cuando no hay productos */
+.no-products {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+/* Lista de productos */
+.product-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+/* Cada producto */
+.product-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-base);
+}
+
+.product-item:hover {
+    transform: translateY(-2px);
+}
+
+/* Emoji del producto */
+.product-emoji {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+/* Información del producto */
+.product-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-name {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--text-primary);
+}
+
+.product-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: var(--spacing-xs) 0;
+}
+
+.product-description {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: var(--spacing-xs) 0;
+    line-height: 1.4;
+}
+
+.product-rating {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    margin: var(--spacing-xs) 0;
+}
+
+.stars {
+    display: flex;
+    gap: 2px;
+}
+
+.star-filled {
+    color: #ffd700;
+}
+
+.star-empty {
+    color: var(--text-muted);
+}
+
+.rating-score {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.reviews-count {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.product-features {
+    margin-top: var(--spacing-sm);
+}
+
+.product-features h5 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0 0 var(--spacing-xs) 0;
+}
+
+.product-features ul {
+    margin: 0;
+    padding-left: var(--spacing-md);
+}
+
+.product-features li {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 2px;
+}
+
+/* Botón de cierre (el que está dentro del Modal.jsx) */
+.modal-close-btn {
+    position: absolute;
+    top: var(--spacing-sm);
+    right: var(--spacing-sm);
+    background: transparent;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: var(--text-secondary);
+    transition: color var(--transition-base);
+}
+
+.modal-close-btn:hover {
+    color: var(--text-primary);
+}

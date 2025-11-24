@@ -1,0 +1,154 @@
+/* PaymentMethods.css – estilos para la página de métodos de pago */
+
+.payment-methods-page {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.payment-methods-page h2 {
+    margin: 0;
+    font-size: 2rem;
+    color: var(--text-primary);
+    text-align: center;
+}
+
+.payment-methods-page p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+}
+
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    background: var(--bg-card);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.method-tabs {
+    display: flex;
+    gap: var(--spacing-sm);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.method-tab {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.method-tab:hover {
+    color: var(--text-primary);
+}
+
+.method-tab.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+.method-tab svg {
+    width: 20px;
+    height: 20px;
+}
+
+.payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.card-fields,
+.paypal-fields,
+.apple-fields {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.card-fields h3,
+.paypal-fields h3,
+.apple-fields h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: var(--text-primary);
+}
+
+.card-fields label,
+.paypal-fields label {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    gap: var(--spacing-xs);
+}
+
+.card-fields .inline {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.card-fields .inline label {
+    flex: 1;
+}
+
+.card-fields input,
+.paypal-fields input {
+    padding: var(--spacing-sm);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    background: var(--bg-body);
+    color: var(--text-primary);
+    font-size: 1rem;
+}
+
+.card-fields input:focus,
+.paypal-fields input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.apple-pay-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background 0.2s ease;
+}
+
+.apple-pay-btn:hover {
+    background: #333;
+}
+
+.apple-pay-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+.payment-form .btn {
+    align-self: center;
+    min-width: 200px;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos de Pago - ToysAll</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 2rem;
+        }
+        .payment-methods-external {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .payment-methods-external h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #2c3e50;
+            text-align: center;
+        }
+        .payment-methods-external ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .payment-methods-external li {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+        .payment-methods-external li:hover {
+            border-color: #3498db;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .payment-link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            text-decoration: none;
+            color: #333;
+            width: 100%;
+            transition: color 0.2s ease;
+        }
+        .payment-link:hover {
+            color: #3498db;
+        }
+        .payment-link svg {
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            color: #3498db;
+        }
+        .payment-link span {
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Métodos de Pago</h1>
+        <div class="payment-methods-external">
+            <h3>Selecciona tu método de pago</h3>
+            <ul>
+                <li>
+                    <a href="https://example.com/pay/card" target="_blank" rel="noopener noreferrer" class="payment-link">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <rect x="2" y="4" width="20" height="16" rx="2" ry="2" />
+                            <line x1="2" y1="10" x2="22" y2="10" />
+                        </svg>
+                        <span>Tarjeta de Crédito/Débito</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.paypal.com" target="_blank" rel="noopener noreferrer" class="payment-link">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10z" />
+                            <path d="M9.5 12h5" />
+                        </svg>
+                        <span>PayPal</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://apple.com/apple-pay" target="_blank" rel="noopener noreferrer" class="payment-link">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M12 2a5 5 0 0 1 5 5c0 2-1 4-3 5a5 5 0 0 1-5-5c0-2 1-4 3-5z" />
+                        </svg>
+                        <span>Apple Pay</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

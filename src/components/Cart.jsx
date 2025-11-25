@@ -17,6 +17,19 @@ const Cart = ({ isOpen, onClose, items, onUpdateQuantity, onRemoveItem }) => {
         };
     }, [isOpen]);
 
+    // Close on Escape
+    useEffect(() => {
+        if (!isOpen) return;
+
+        const handleKey = (e) => {
+            if (e.key === 'Escape') {
+                onClose();
+            }
+        };
+        document.addEventListener('keydown', handleKey);
+        return () => document.removeEventListener('keydown', handleKey);
+    }, [isOpen, onClose]);
+
     const navigate = useNavigate();
 
     const subtotal = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
